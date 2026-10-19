@@ -6,13 +6,13 @@ A console-based digital wallet application built in **C++** with a **MySQL** bac
 
 ## Features
 
-- **User Registration & Login** — secure account creation with an auto-created wallet on signup
-- **View Profile** — see your registered account details
-- **Wallet Management** — check balance, add money, withdraw money (with insufficient-balance protection)
-- **Transfer Money** — send funds to another user by email, with checks against self-transfers and invalid receivers
-- **Transaction History** — view all sent/received transfers
-- **Notifications** — automatic in-app messages for wallet activity (money added, sent, received)
-- **Admin Panel** — view all users, block/unblock accounts, view all transactions system-wide
+- **User Registration & Login** - secure account creation with an auto-created wallet on signup
+- **View Profile** - see your registered account details
+- **Wallet Management** - check balance, add money, withdraw money (with insufficient-balance protection)
+- **Transfer Money** - send funds to another user by email, with checks against self-transfers and invalid receivers
+- **Transaction History** - view all sent/received transfers
+- **Notifications** - automatic in-app messages for wallet activity (money added, sent, received)
+- **Admin Panel** - view all users, block/unblock accounts, view all transactions system-wide
 
 ---
 
@@ -86,7 +86,7 @@ digwalletproj/
 
 ## Build & Run
 
-Open **MSYS2 UCRT64** (not PowerShell or CMD — required for GCC/DLL resolution), then:
+Open **MSYS2 UCRT64** (not PowerShell or CMD - required for GCC/DLL resolution), then:
 
 ```bash
 cd /c/Users/asus/Documents/digwalletproj
@@ -142,7 +142,7 @@ cp "/c/Program Files/MySQL/MySQL Server 8.0/lib/libmysql.dll" .
 
 ## Known Limitations / Future Improvements
 
-- Passwords are stored in plaintext — a production version would use hashing (e.g. bcrypt).
+- Passwords are stored in plaintext - a production version would use hashing (e.g. bcrypt).
 - Admin credentials are hardcoded rather than stored in a dedicated `Admins` table.
 - Transfer logic uses sequential `UPDATE` statements rather than a wrapped MySQL transaction (`BEGIN`/`COMMIT`/`ROLLBACK`), so a mid-transfer failure isn't atomic.
 - `Cashback`, `Blocked_Users` (reason logging), and `Login_History` are designed in the schema but not yet connected to the application logic.
